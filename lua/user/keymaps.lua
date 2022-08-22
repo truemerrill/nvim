@@ -39,6 +39,10 @@ keymap("n", "<S-Right>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-Left>", ":bprevious<CR>", opts)
 
+-- Terminal
+keymap("t", "<Leader><Esc>", "<C-\\><C=n>", term_opts)
+
+
 -- Resize windows
 -- keymap("n", "<Tab-Up>", ":resize -2<CR>", opts)
 -- keymap("n", "<Tab-Down>", ":resize +2<CR>", opts)

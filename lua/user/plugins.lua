@@ -74,6 +74,15 @@ return packer.startup(function (use)
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
 
+  -- Toggle term
+  use {"akinsho/toggleterm.nvim",
+    config = function ()
+      require("toggleterm").setup({
+        open_mapping = "<Leader>`"
+      })
+    end
+  }
+
   if Packer_Bootstrap then
     require("packer").sync()
   end
