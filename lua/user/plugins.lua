@@ -2,7 +2,6 @@
 -- Automatically install packer
 local fn = vim.fn
 local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
-
 if fn.empty(fn.glob(install_path)) > 0 then
   Packer_Bootstrap = fn.system({
     "git",
@@ -73,6 +72,12 @@ return packer.startup(function (use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
+
+  -- Treesitter
+  use {"nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate"
+  }
+  -- use "p00f/nvim-ts-rainbow"
 
   -- Toggle term
   use {"akinsho/toggleterm.nvim",

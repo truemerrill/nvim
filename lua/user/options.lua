@@ -12,6 +12,7 @@ local options = {
   splitright = true,          -- vertical splits go right of current window
   cursorline = true,          -- highlight the current line
   number = true,              -- show line numbers
+  numberwidth = 4,            -- set number column width to 4
   updatetime = 500,           -- faster completion (4000ms default)
   tabstop = 2,                -- insert two spaces for tab
   shiftwidth = 2,             -- number of spaces inserted for each tab
