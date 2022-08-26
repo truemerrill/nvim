@@ -40,17 +40,17 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-Left>", ":bprevious<CR>", opts)
 
 -- Terminal
-keymap("t", "<Leader><Esc>", "<C-\\><C=n>", term_opts)
+keymap("n", "<Leader><Tab>", ":ToggleTerm<CR>", opts)
+keymap("t", "<Leader><Tab>", "<C-\\><C-n>", term_opts)
 
 
 -- Resize windows
--- keymap("n", "<Tab-Up>", ":resize -2<CR>", opts)
--- keymap("n", "<Tab-Down>", ":resize +2<CR>", opts)
--- keymap("n", "<Tab-Left>", ":vertical resize -2<CR>", opts)
--- keymap("n", "<Tab-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<Tab>k", ":resize -2<CR>", opts)
+keymap("n", "<Tab>j", ":resize +2<CR>", opts)
+keymap("n", "<Tab>h", ":vertical resize -2<CR>", opts)
+keymap("n", "<Tab>l", ":vertical resize +2<CR>", opts)
 
 -- Telescope
 keymap("n", "<Leader>f", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>t", ":Telescope live_grep<CR>", opts)
--- keymap("n", "<Leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = 10 })<CR>", opts)
 

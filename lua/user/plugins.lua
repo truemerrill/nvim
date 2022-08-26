@@ -82,9 +82,7 @@ return packer.startup(function (use)
   -- Toggle term
   use {"akinsho/toggleterm.nvim",
     config = function ()
-      require("toggleterm").setup({
-        open_mapping = "<Leader>`"
-      })
+      require("toggleterm").setup()
     end
   }
 

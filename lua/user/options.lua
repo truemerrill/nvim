@@ -19,6 +19,7 @@ local options = {
   expandtab = true,           -- convert tabs to spaces
   wrap = false,               -- do not wrap lines in view
   scrolloff = 8,
+  signcolumn = "yes"          -- gutter to hold lsp icons
 }
 
 for k, v in pairs(options) do
