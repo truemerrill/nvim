@@ -18,10 +18,7 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Toggle explorer
-local status_ok, _ = pcall(require, "user.commands")
-if status_ok then
-  keymap("n", "<Leader>n", ":ToggleExplorer<CR>", opts)
-end
+keymap("n", "<Leader>n", ":NvimTreeToggle<CR>", opts)
 
 -- Navigate windows
 keymap("n", "<Leader><Up>", "<C-w>k", opts)
@@ -43,7 +40,6 @@ keymap("n", "<S-Left>", ":bprevious<CR>", opts)
 keymap("n", "<Leader><Tab>", ":ToggleTerm<CR>", opts)
 keymap("t", "<Leader><Tab>", "<C-\\><C-n>", term_opts)
 
-
 -- Resize windows
 keymap("n", "<Tab>k", ":resize -2<CR>", opts)
 keymap("n", "<Tab>j", ":resize +2<CR>", opts)
@@ -53,4 +49,7 @@ keymap("n", "<Tab>l", ":vertical resize +2<CR>", opts)
 -- Telescope
 keymap("n", "<Leader>f", ":Telescope find_files<CR>", opts)
 keymap("n", "<Leader>t", ":Telescope live_grep<CR>", opts)
+
+-- Neogen
+keymap("n", "<Leader>d", ":lua require('neogen').generate()<CR>", opts)
 

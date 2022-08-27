@@ -53,6 +53,15 @@ return packer.startup(function (use)
   use "ellisonleao/gruvbox.nvim"
   use "Mofiqul/vscode.nvim"
 
+  -- Aesthetics
+  use {"akinsho/bufferline.nvim",
+    tag = "v2.*",
+    requires = "kyazdani42/nvim-web-devicons"
+  }
+  use {"kyazdani42/nvim-tree.lua",
+    requires = "kyazdani42/nvim-web-devicons"
+  }
+
   -- Completion
   use "hrsh7th/nvim-cmp"                -- Completion engine
   use "hrsh7th/cmp-buffer"              -- Buffer completion
@@ -74,17 +83,16 @@ return packer.startup(function (use)
   use "nvim-telescope/telescope-media-files.nvim"
 
   -- Treesitter
-  use {"nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate"
+  use "nvim-treesitter/nvim-treesitter"
+  use "windwp/nvim-autopairs"
+
+  -- Docstrings
+  use {"danymat/neogen",
+    requires = "nvim-treesitter/nvim-treesitter"
   }
-  -- use "p00f/nvim-ts-rainbow"
 
   -- Toggle term
-  use {"akinsho/toggleterm.nvim",
-    config = function ()
-      require("toggleterm").setup()
-    end
-  }
+  use "akinsho/toggleterm.nvim"
 
   if Packer_Bootstrap then
     require("packer").sync()
